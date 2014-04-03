@@ -7,6 +7,27 @@
 <body>
 	<script>
 		 var meuArray = ['maça','banana','laranja'];
+		 
+		 document.write('<br /><br />');
+		 document.write('Original:');
+		 document.write('<br /><br />');
+		 for (idx in meuArray){
+		 	document.write(meuArray[idx] + '<br />');
+		 }
+		 
+		 document.write('<br /><br />');
+		 document.write('Ordenado:');
+		 document.write('<br /><br />');
+		 for (idx in meuArray){
+		 	for(idx2 in meuArray){
+		 		if (meuArray[idx] < meuArray[idx2]){
+		 			var temp = meuArray[idx];
+		 			meuArray[idx] = meuArray[idx2];
+		 			meuArray[idx2] = temp;
+		 		}
+		 	}
+		 }
+		 
 		 for (idx in meuArray){
 		 	document.write(meuArray[idx] + '<br />');
 		 }
